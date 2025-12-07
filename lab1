@@ -1,0 +1,48 @@
+puts "Оберіть задачу:"
+puts "1 - Мінімальна цифра у числі"
+puts "2 - Перший і останній слова у рядку"
+puts "3 - Перевірка впорядкованості рядкових літер"
+puts "Інші цифри або букви виведуть вас з програми"
+
+while true 
+print "Виберіть операцію: "
+choice = gets.to_i
+
+case choice
+when 1
+  print "Введіть число: "
+  n = gets.to_i
+  min = 9
+  while n > 0
+    digit = n % 10
+    min = digit if digit < min
+    n = n / 10
+  end
+  puts "Мінімальна цифра: #{min}"
+
+when 2
+  print "Введіть рядок: "
+  line = gets.chomp
+  words = line.split
+  if words.length >= 2
+    words[0], words[-1] = words[-1], words[0]
+  end
+  puts words.join(" ")
+
+when 3
+  print "Введіть рядок: "
+  line = gets.chomp
+
+  letters = line.chars.select { |c| ('a'..'z').include?(c) }
+
+  if letters == letters.sort
+    puts "Рядкові символи впорядковані за зростанням"
+  else
+    puts "Рядкові символи не впорядковані"
+end
+
+else
+  break
+end
+
+end
