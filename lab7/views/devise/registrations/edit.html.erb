@@ -1,0 +1,49 @@
+<h2><%= t("devise.registrations.edit.title") %></h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+
+  <%= devise_error_messages! %>
+
+  <div class="mb-3">
+    <%= f.label :name, t("devise.registrations.edit.name") %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :email, t("devise.registrations.edit.email") %>
+    <%= f.email_field :email, autofocus: true, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :password, t("devise.registrations.edit.password") %>
+    <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+    <small><%= t("devise.registrations.edit.leave_blank") %></small>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :password_confirmation, t("devise.registrations.edit.password_confirmation") %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :current_password, t("devise.registrations.edit.current_password") %>
+    <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control" %>
+    <small><%= t("devise.registrations.edit.need_current") %></small>
+  </div>
+
+  <div class="mb-3">
+    <%= f.submit t("devise.registrations.edit.update"), class: "btn btn-primary" %>
+  </div>
+
+<% end %>
+
+<hr>
+
+<h3><%= t("devise.registrations.edit.cancel_title") %></h3>
+<p><%= t("devise.registrations.edit.cancel_description") %></p>
+
+<%= button_to t("devise.registrations.edit.cancel_account"),
+              registration_path(resource_name),
+              data: { confirm: t("devise.registrations.edit.confirm_cancel") },
+              method: :delete,
+              class: "btn btn-danger" %>

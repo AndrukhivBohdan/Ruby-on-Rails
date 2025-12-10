@@ -1,0 +1,12 @@
+<% content_for :title, t(".title") %>
+
+<h1><%= t(".title") %></h1>
+
+<%= render "form", product: @product %>
+
+<br>
+
+<div>
+  <%= link_to t(".show_product"), @product %> |
+  <%= link_to t(".back"), products_path %>
+</div>

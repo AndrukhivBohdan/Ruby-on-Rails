@@ -1,0 +1,99 @@
+uk:
+  navbar:
+    brand: "Warehouse System"
+    home: "Головна"
+    about: "Про нас"
+    contact: "Контакти"
+    products: "Товари"
+    categories: "Категорії"
+    movements: "Рухи"
+    edit_profile: "Редагувати профіль"
+    logout: "Вийти"
+    sign_up: "Реєстрація"
+    login: "Увійти"
+
+  common:
+    show: "Переглянути"
+    edit: "Редагувати"
+    delete: "Видалити"
+    confirm_delete: "Ви впевнені?"
+    back: "Назад"
+    back_to_products: "Назад до товарів"
+
+  products:
+    index:
+      title: "Товари"
+      new_product: "Новий товар"
+      movements: "Рухи товару"
+      table:
+        name: "Назва"
+        category: "Категорія"
+        quantity: "Кількість"
+        price: "Ціна"
+        actions: "Дії"
+
+    show:
+      edit: "Редагувати товар"
+      back: "Назад до товарів"
+      destroy: "Видалити товар"
+      confirm_destroy: "Ви впевнені, що хочете видалити товар?"
+
+    new:
+      title: "Новий товар"
+      errors_title:
+        one: "1 помилка не дає зберегти товар"
+        other: "%{count} помилок не дають зберегти товар"
+      name: "Назва"
+      category: "Категорія"
+      quantity: "Кількість"
+      price: "Ціна"
+      description: "Опис"
+      submit: "Створити товар"
+
+    edit:
+      title: "Редагування товару"
+      show_product: "Показати товар"
+      back: "Назад до товарів"
+
+  flash:
+    created: "Товар успішно створено"
+    updated: "Товар успішно оновлено"
+    destroyed: "Товар успішно видалено"
+
+
+  devise:
+    registrations:
+      new:
+        title: "Реєстрація"
+        name: "Імʼя"
+        email: "Email"
+        password: "Пароль"
+        password_confirmation: "Підтвердження пароля"
+        submit: "Зареєструватися"
+
+      edit:
+        title: "Редагувати профіль"
+        name: "Імʼя"
+        email: "Email"
+        password: "Пароль"
+        password_hint: "(залиште порожнім)"
+        password_confirmation: "Підтвердження пароля"
+        current_password: "Поточний пароль"
+        current_password_hint: "(потрібен для підтвердження)"
+        update: "Оновити"
+        cancel_account: "Видалити акаунт"
+        cancel_account_warning: "Після видалення повернення неможливе"
+
+    sessions:
+      new:
+        title: "Вхід"
+        email: "Email"
+        password: "Пароль"
+        remember_me: "Запамʼятати мене"
+        submit: "Увійти"
+
+    shared:
+      links:
+        sign_up: "Реєстрація"
+        sign_in: "Увійти"
+        forgot_your_password: "Забули пароль?"

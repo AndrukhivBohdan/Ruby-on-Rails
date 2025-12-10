@@ -1,0 +1,45 @@
+<h1><%= t(".title") %></h1>
+
+<%= form_with(model: @product, local: true) do |form| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= t(".errors_title", count: @product.errors.count) %>
+      </h2>
+      <ul>
+        <% @product.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, t(".name") %><br>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :category_id, t(".category") %><br>
+    <%= form.number_field :category_id %>
+  </div>
+
+  <div>
+    <%= form.label :quantity, t(".quantity") %><br>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <div>
+    <%= form.label :price, t(".price") %><br>
+    <%= form.text_field :price %>
+  </div>
+
+  <div>
+    <%= form.label :description, t(".description") %><br>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.submit t(".submit") %>
+  </div>
+<% end %>
