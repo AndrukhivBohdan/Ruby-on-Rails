@@ -1,0 +1,33 @@
+<p class="text-success"><%= notice %></p>
+
+<h1>Products</h1>
+
+<%= link_to "New Product", new_product_path, class: "btn btn-success mb-3" %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.category.name if product.category %></td>
+        <td><%= product.quantity %></td>
+        <td><%= product.price %></td>
+        <td>
+          <%= link_to "Show", product_path(product), class: "btn btn-info btn-sm" %>
+          <%= link_to "Edit", edit_product_path(product), class: "btn btn-warning btn-sm" %>
+          <%= link_to "Delete", product_path(product), method: :delete, data: { confirm: "Ви впевнені?" }, class: "btn btn-danger btn-sm" %>
+          <%= link_to "Movements", product_movements_path(product), class: "btn btn-secondary btn-sm" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
